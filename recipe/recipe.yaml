@@ -14,7 +14,7 @@ source:
   sha256: ffbf04ce52242a3c728c6eff18e6f829df781668d1e913b7337a57f4332878ad
 
 build:
-  number: 0
+  number: 1
   script:
     env:
       CARGO_PROFILE_RELEASE_STRIP: symbols
@@ -52,7 +52,7 @@ requirements:
   - if: unix
     then: openssl
   run:
-  - pixi-build-api-version >=4,<5
+  - pixi-build-api-version >=5,<6
 
 tests:
 - script: ${{ name }} --help
